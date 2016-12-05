@@ -1,0 +1,31 @@
+<?php 
+    include 'conn.php';
+    $conexion = conectar();
+    session_start();
+ ?>
+ <!DOCTYPE html>
+ <html lang="es">
+ <head>
+  <meta charset="UTF-8">
+  <title>Validando...</title>
+ </head>
+ <body>
+  <?php 
+    if (isset($_POST['login'])) {
+      $usuario = $_POST['usuario'];
+      $clave = $_POST['clave'];
+      $consulta=("SELECT * FROM administradores WHERE usuario='$usuario' AND contra='$clave';");
+      $sql = mysql_query($consulta);
+      if ($sql && mysql_num_rows($sql)) {
+        $row = mysql_fetch_array($sql);
+        $_SESSION["correo"] = $row['correo'];
+        echo '<script> alert("Iniciando sesion de '.$_SESSION['correo'].'");</script>';
+        echo '<script>window.location="../table.php"; </script>';
+      }else{
+        echo '<script> alert("Usuario o contraseña incorrectos.");</script>';
+        echo '<script> window.location="../index.php"; </script>';
+      }
+    }
+   ?>
+ </body>
+ </html>
