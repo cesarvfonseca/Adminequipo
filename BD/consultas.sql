@@ -1,7 +1,8 @@
 /*EQUIPOS*/
 SELECT * FROM equipos;
-CALL ultimoidEquipos('PC%');
-SELECT MAX(substr(cod_equipo,3,1)) AS id FROM equipos WHERE cod_equipo LIKE 'MQ%';
+CALL ultimoidEquipos('MQ');
+SELECT * FROM equipos WHERE cod_equipo LIKE 'MQ%';
+SELECT MAX(substr(cod_equipo,3,1)) AS id FROM equipos WHERE cod_equipo LIKE 'PC%';
 
 INSERT INTO `equipos`
 (`cod_equipo`, `tipo`, `marca`, `modelo`, `numero_serie`, `numero_producto`, `numero_factura`, `fecha_factura`, `disco_duro`, `ram`, `sistema_operativo`, `comentarios`, `status`, `RESPONSABLES_cod_resp`) 
@@ -24,4 +25,16 @@ SELECT e.cod_equipo,CONCAT(r.nombre,' ',r.apellido) as nombre,r.puesto,r.sucursa
 FROM equipos as e
 INNER JOIN responsables as r
 WHERE e.RESPONSABLES_cod_resp=r.cod_resp;
+
+CALL maximoResponsablesequipos(MQ);
+SELECT MAX(substr(r.cod_resp,3,1)) AS idRESPONSABLE,MAX(substr(e.cod_equipo,3,1)) AS idEQUIPO
+FROM equipos as e
+INNER JOIN responsables r
+WHERE e.cod_equipo LIKE 'MQ%';
+
+CALL insertarEquipo_responsable
+('GH4','Gabriela','Hernandez','Auxiliar de ventas','Corporativo','VEntas','ghernandez@mexq.com.mx','2016-01-01',
+'PC2','PC','HP','GIB','FSDFSDFSDF','RTSDFSDFSDFRTRT','A78883','2016-01-01','1TB','8GB','WIN7','N/A','A','GH4');
+
+
 

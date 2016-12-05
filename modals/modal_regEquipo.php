@@ -54,7 +54,7 @@
 							<div class="form-group">
 								<div class="col-sm-4">
 									<label for="e_tipo">Tipo de equipo...</label>
-									<select class="form-control" name="" id="e_tipo">
+									<select class="form-control" name="e_tipo" id="e_tipo">
 										<option value="PC">Desktop</option>
 										<option value="LAPTOP">Laptop</option>
 									</select>
@@ -98,7 +98,7 @@
 							<div class="form-group">
 								<div class="col-sm-4">
 									<label for="e_dduro">Disco Duro</label>
-									<select class="form-control" name="" id="e_dduro">
+									<select class="form-control" name="e_dduro" id="e_dduro">
 										<option value="120GB">120 GB</option>
 										<option value="160GB">160 GB</option>
 										<option value="320GB">320 GB</option>
@@ -109,7 +109,7 @@
 
 								<div class="col-sm-4">
 									<label for="e_mram">RAM</label>
-									<select class="form-control" name="" id="e_ram">
+									<select class="form-control" name="e_ram" id="e_ram">
 										<option value="1GB">1 GB</option>
 										<option value="2GB">2 GB</option>
 										<option value="4GB">4 GB</option>
@@ -120,7 +120,7 @@
 
 								<div class="col-sm-4">
 									<label for="e_os">SO</label>
-									<select class="form-control" name="" id="e_os">
+									<select class="form-control" name="e_os" id="e_os">
 										<option value="wXP">Windows XP</option>
 										<option value="w7">Windows 7</option>
 										<option value="w8">Windows 8</option>
