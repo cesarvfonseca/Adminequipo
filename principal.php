@@ -1,12 +1,14 @@
+<?php 
+include "libs/qrcode-lib/qrlib.php";
+ ?>
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Registro de equipos</title>
 	<link rel="shortcut icon" href="img/csr.ico"> 
 	<link rel="stylesheet" href="libs/css/font-awesome.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 <body>
 	<div class="container-fluid">
@@ -15,8 +17,8 @@
 		</div>
 
 		<div class="row">
-			<div class="col-md-2 col-md-offset-10">
-				<button class="btn btn-xs btn-success" data-toggle="modal" data-target="#nuevoEquipo">
+			<div class="col-md-12 col-md-offset-1">
+				<button class="btn btn-sm btn-success" data-toggle="modal" data-target="#nuevoEquipo">
 					Agregar
 					<i class="ace-icon fa fa-arrow-right icon-on-right"></i>
 				</button>

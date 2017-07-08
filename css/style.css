@@ -1,0 +1,32 @@
+body{
+	background: #FFFFF0;
+	position: relative;
+}
+
+header{
+	background: #00CCCC;
+	color: #000000;
+}
+
+.main{
+	background: green;
+}
+
+.color1{
+	background: grey;
+	color: white;
+}
+
+aside{
+	background: blue;
+	color: yellow;
+}
+
+footer{
+	background: grey;
+	color: yellow;
+}
+
+.seccion{
+	padding-top: 10%;
+}

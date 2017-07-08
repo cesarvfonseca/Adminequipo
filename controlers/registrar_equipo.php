@@ -12,6 +12,8 @@ if(isset($_POST['p_nombre'])){
 	$eNProducto=$_POST['e_nproducto'];
 	$eFactura=$_POST['e_factura'];
 	$eFechaf=$_POST['e_fechaf'];
+	$eProveedor=$_POST['e_proveedor'];
+	$eProcesador=$_POST['e_procesador'];
 	$eDduro=$_POST['e_dduro'];
 	$eRam=$_POST['e_ram'];
 	$eOs=$_POST['e_os'];
@@ -63,7 +65,7 @@ if(isset($_POST['p_nombre'])){
 	$rCodigo=substr($rNombre, 0,1).substr($rApe, 0,1).$idr;
 
 	//Inserta en la tabla Responsables
-	$sentencia = $dbh->prepare("CALL insertarEquipo_responsable(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);");
+	$sentencia = $dbh->prepare("CALL insertarEquipo_responsable(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);");
 	$sentencia->bindParam(1, $rCodigo);
 	$sentencia->bindParam(2, $rNombre);
 	$sentencia->bindParam(3, $rApe);
@@ -81,19 +83,15 @@ if(isset($_POST['p_nombre'])){
 	$sentencia->bindParam(14, $eNProducto);
 	$sentencia->bindParam(15, $eFactura);
 	$sentencia->bindParam(16, $eFechaf);
-	$sentencia->bindParam(17, $eDduro);
-	$sentencia->bindParam(18, $eRam);
-	$sentencia->bindParam(19, $eOs);
-	$sentencia->bindParam(20, $eComentario);
-	$sentencia->bindParam(21, $eStatus);
-	$sentencia->bindParam(22, $rCodigo);
+	$sentencia->bindParam(17, $eProveedor);
+	$sentencia->bindParam(18, $eProcesador);
+	$sentencia->bindParam(19, $eDduro);
+	$sentencia->bindParam(20, $eRam);
+	$sentencia->bindParam(21, $eOs);
+	$sentencia->bindParam(22, $eComentario);
+	$sentencia->bindParam(23, $eStatus);
+	$sentencia->bindParam(24, $rCodigo);
 	$sentencia->execute();
-
-	//  $sql = "INSERT INTO personas (cPerNombre, cPerApellido, cPerTelefono, cPerDni,cPerEmail)
-	//     			        	VALUES ('$nombre', '$apellido', '$telefono','$dni','$email')";
-
-	// $query = $cn->query($sql);
-
 if ($sentencia) {
 
 	echo "<script>alert('Registro exitoso!');</script>";

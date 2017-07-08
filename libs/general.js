@@ -30,14 +30,12 @@ var personas = (function (personas, undefined) {
                 success: function (data) {  //EL JSON QUE ENVIAMOS DESDE BUSCAR_DATOS_ID SE ALMACENA EN DATA 
 
                     var oDato = JSON.parse(data);   // JSON.parse convierte ese JSON en un objeto 
-
-                    $('#codPersona').val(oDato[0].nPerCodigo);
-                    $('#nomPersona').val(oDato[0].cPerNombre);
-                    $('#apePersona').val(oDato[0].cPerApellido);
-                    $('#dniPersona').val(oDato[0].cPerDni);
-                    $('#emaPersona').val(oDato[0].cPerEmail);
-                    $('#telPersona').val(oDato[0].cPerTelefono);
-
+                    $('#cod_equipo').val(oDato[0].cod_equipo);
+                    $('#cod_equipo_POST').val(oDato[0].cod_equipo);
+                    $('#Edit_modelo').val(oDato[0].modelo);
+                    $('#Edit_nserie').val(oDato[0].numero_serie);
+                    $('#Edit_nproducto').val(oDato[0].numero_producto);
+                    $('#Edit_factura').val(oDato[0].numero_factura);
                 },
 
             });
@@ -66,13 +64,12 @@ personas.mostrar = function () {
                 success: function (data) {  //EL JSON QUE ENVIAMOS DESDE BUSCAR_DATOS_ID SE ALMACENA EN DATA 
 
                     var oDato = JSON.parse(data);   // JSON.parse convierte ese JSON en un objeto 
-
-                    $('#codPersona').val(oDato[0].nPerCodigo);
-                    $('#nomPersona').val(oDato[0].cPerNombre);
-                    $('#apePersona').val(oDato[0].cPerApellido);
-                    $('#dniPersona').val(oDato[0].cPerDni);
-                    $('#emaPersona').val(oDato[0].cPerEmail);
-                    $('#telPersona').val(oDato[0].cPerTelefono);
+                    $('#cod_equipo').val(oDato[0].cod_equipo);
+                    $('#cod_equipo_POST').val(oDato[0].cod_equipo);
+                    $('#Edit_modelo').val(oDato[0].modelo);
+                    $('#Edit_nserie').val(oDato[0].numero_serie);
+                    $('#Edit_nproducto').val(oDato[0].numero_producto);
+                    $('#Edit_factura').val(oDato[0].numero_factura);
 
                 },
 
